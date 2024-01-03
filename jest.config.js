@@ -9,8 +9,12 @@ module.exports = {
   },
    // to obtain access to the matchers.
   setupFilesAfterEnv: ['./src/setupTests.ts'],
+  setupFiles: ['./src/jest.polyfills.ts'],
       
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   modulePaths: ['<rootDir>'],
   testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    customExportConditions: [''],
+  }
 };
